@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="computerNum()">
+    <main>
+      <div id="welcome">
+        <h2>Guess The Number Between 1-100</h2>
+        <img class="logo" src="Images/game-pic.jpg" alt="Game Photo" />
+        <section class="event">
+          <p>Select The Difficulty</p>
+          <div class="button">
+            <button onclick="easyMode()">Easy: 10 Attempts</button>
+            <button onclick="hardMode()">Hard: 05 Attempts</button>
+            <button onclick="mediumMode()">Medium: 07 Attempts</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Game Area -->
+      <div id="game-area">
+        <div id="game-button">
+          <button onclick="location.reload()">New Game</button>
+        </div>
+        <section>
+          <h3 id="your-guess">Your Guess</h3>
+          <input
+            type="text"
+            id="input-box"
+            min="1"
+            max="100"
+            placeholder="Enter Your Guess"
+            onchange="inputByUser()"
+          />
+          <!-- onchange will collect value in the function inputByUser() -->
+        </section>
+        <section class="stats">
+          <div class="info">
+            <p>Number of Previous Attempts</p>
+            <span id="attempts">0</span>
+          </div>
+          <div class="info">
+            <p>Number Guessed</p>
+            <span id="guesses">0</span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Script -->
+    <script src="index.js"></script>
+  </body>
+</html>
